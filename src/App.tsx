@@ -270,6 +270,31 @@ function BeneficiosView({ onBack }: { onBack: () => void }) {
             </div>
           )}
         </div>
+
+        {/* Accordion Item 3 */}
+        <div className="border-b border-gray-200 last:border-0">
+          <button 
+            onClick={() => toggleAccordion(2)}
+            className="w-full flex justify-between items-center p-5 text-left focus:outline-none focus:bg-gray-50 hover:bg-gray-50"
+          >
+            <h3 className="text-xl font-bold text-gray-900">Programa Pé-de-Meia</h3>
+            {openAccordion === 2 ? <ChevronUp size={24} className="text-blue-600" /> : <ChevronDown size={24} className="text-gray-400" />}
+          </button>
+          {openAccordion === 2 && (
+            <div className="p-5 pt-0 bg-gray-50 text-gray-700 text-lg leading-relaxed">
+              <p className="mb-3"><strong>O que é:</strong> Incentivo financeiro-educacional para estudantes do ensino médio público, visando a permanência e conclusão escolar.</p>
+              <p className="mb-2"><strong>Quem tem direito:</strong></p>
+              <ul className="list-disc list-inside space-y-2 ml-2">
+                <li>Estudantes de 14 a 24 anos matriculados no ensino médio público.</li>
+                <li>Fazer parte de família inscrita no Cadastro Único (CadÚnico).</li>
+                <li>Manter frequência escolar adequada (mínimo de 80%).</li>
+                <li>Participar de exames como o ENEM.</li>
+              </ul>
+              {/* FUTURO: Link para site oficial do governo */}
+              <button className="mt-4 text-blue-700 font-bold underline">Acessar site oficial</button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
